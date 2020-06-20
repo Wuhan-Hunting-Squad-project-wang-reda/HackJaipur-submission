@@ -104,4 +104,30 @@ def requires_auth(f):
     return decorated
 
 
+@app.route('/dashboard')
+@requires_auth
+def dashboard():
+    return (render_template('/index.html',
+                            userinfo=session['profile'],
+                            userinfo_pretty=json.dumps(session['jwt_payload'], indent=4)))
+
+
+# /server.py
+
+@app.route('/logout')
+def logout():
+    # Clear session stored data
+    session.clear()
+    # Redirect user to logout endpoint
+    params = {'returnTo': url_for('/', _external=True), 'client_id': 'EiQUVvi2sUFVHxmUfFVmTsq2CJj6I9VR'}
+    return redirect(auth0.api_base_url + '/v2/logout?' + urlencode(params))
+
+
+@app.route('/dashboard/demography')
+@requires_auth
+def demography():
+    return render_template('/charts.html',
+                            userinfo=session['profile'],
+                            userinfo_pretty=json.dumps(session['jwt_payload'], indent=4))
+
 
