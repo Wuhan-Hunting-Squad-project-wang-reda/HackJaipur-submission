@@ -172,51 +172,16 @@
                     </tr>
                   </tfoot>
                   <tbody>
-                      <tr>
-                      <td>1</td>
-                      <td>Tiger Nixon</td>
-                      <td>fever</td>
-                      <td>alpha gardens, kr puram, bangalore</td>
-                      <td>61</td>
-                      <td>15/6/20</td>
-                     
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Garrett Winters</td>
-                      <td>cough</td>
-                      <td>Tokyo</td>
-                      <td>63</td>
-                      <td>12/6/20</td>
-                      
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>Ashton Cox</td>
-                      <td>suffocation in breathing</td>
-                      <td>San Francisco</td>
-                      <td>66</td>
-                      <td>4/6/20</td>
-                     
-                    </tr>
-                    <tr>
-                      <td>4</td>
-                      <td>Cedric Kelly</td>
-                      <td>sars</td>
-                      <td>Edinburgh</td>
-                      <td>22</td>
-                      <td>2/6/20</td>
-                     
-                    </tr>
-                    <tr>
-                      <td>5</td>
-                      <td>Airi Satou</td>
-                      <td>clod and fever</td>
-                      <td>Tokyo</td>
-                      <td>33</td>
-                      <td>16/6/20</td>
-                     
-                    </tr>
+		  {% for i in range(0,len) %}
+                  <tr>
+                    <td>{{ slno_array[i][0] }}</td>
+                    <td>{{ name_array[i][0] }}</td>
+                    <td>{{ symptoms_array[i][0] }}</td>
+                    <td>{{ address_array[i][0] }}</td>
+                    <td>{{ age_array[i][0] }}</td>
+                    <td>{{ reported_date_array[i][0] }}</td>
+                  </tr>
+                  {% endfor %}
                   </tbody>
                 </table>
 

@@ -130,4 +130,36 @@ def demography():
                             userinfo=session['profile'],
                             userinfo_pretty=json.dumps(session['jwt_payload'], indent=4))
 
+@app.route('/dashboard/datacompendium')
+@requires_auth
+def datacompendium():
+    db, cursor = require_db_connection()
+    # make sql query
+    sql_query_to_get_all_slno = "SELECT SlNo FROM Symptoms"
+    sql_query_to_get_all_names = "SELECT Name FROM Symptoms"
+    sql_query_to_get_all_symptoms = "SELECT Symptoms FROM Symptoms"
+    sql_query_to_get_all_address = "SELECT AddressOrNo FROM Symptoms"
+    sql_query_to_get_all_age = "SELECT Age FROM Symptoms"
+    sql_query_to_get_all_reported_date = "SELECT Date FROM Symptoms"
+
+    cursor.execute(sql_query_to_get_all_slno)
+    slno_array = cursor.fetchall()
+
+    cursor.execute(sql_query_to_get_all_names)
+    name_array = cursor.fetchall()
+
+    cursor.execute(sql_query_to_get_all_symptoms)
+    symptoms_array = cursor.fetchall()
+
+    cursor.execute(sql_query_to_get_all_address)
+    address_array = cursor.fetchall()
+
+    cursor.execute(sql_query_to_get_all_age)
+    age_array = cursor.fetchall()
+
+    cursor.execute(sql_query_to_get_all_reported_date)
+    reported_date_array = cursor.fetchall()
+    return (render_template('/tables.html',
+                            userinfo=session['profile'],
+                            userinfo_pretty=json.dumps(session['jwt_payload'], indent=4), len=len(name_array), slno_array=slno_array, name_array=name_array, symptoms_array=symptoms_array, address_array=address_array, age_array=age_array, reported_date_array=reported_date_array))
 
