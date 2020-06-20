@@ -40,3 +40,68 @@ def require_db_connection():
 
     return db, db.cursor()
 
+@app.errorhandler(Exception)
+def handle_auth_error(ex):
+    response = jsonify(message=str(ex))
+    response.status_code = (ex.code if isinstance(ex, HTTPException) else 500)
+    return response
+
+
+oauth = OAuth(app)
+
+auth0 = oauth.register(
+    'auth0',
+    redirect="GG",
+    client_id='EiQUVvi2sUFVHxmUfFVmTsq2CJj6I9VR',
+    client_secret='eFKgAM50K89r6BiN3cvzEm3-UAh5WDPnbXj3AFTqHQ_s1idiPKzLzHaQD2E1XRMY',
+    api_base_url='https://dev-jb-2phci.us.auth0.com',
+    access_token_url='https://dev-jb-2phci.us.auth0.com/oauth/token',
+    authorize_url='https://dev-jb-2phci.us.auth0.com/authorize',
+    client_kwargs={
+        'scope': 'openid profile email',
+    },
+)
+
+
+@app.route("/")
+def homepage():
+    return render_template('homepage.html')
+
+
+# Here we're using the /callback route.
+@app.route('/callback')
+def callback_handling():
+    # Handles response from token endpoint
+    auth0.authorize_access_token()
+    resp = auth0.get('userinfo')
+    userinfo = resp.json()
+
+    # Store the user information in flask session.
+    session['jwt_payload'] = userinfo
+    session['profile'] = {
+        'user_id': userinfo['sub'],
+        'name': userinfo['name'],
+        'picture': userinfo['picture']
+    }
+    return redirect('/dashboard')
+
+
+@app.route('/login')
+def login():
+    return auth0.authorize_redirect(redirect_uri='http://localhost:5000/callback')
+
+
+# /server.py
+
+def requires_auth(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        if 'profile' not in session:
+            # Redirect to Login page here
+            return redirect('/')
+        return f(*args, **kwargs)
+
+    return decorated
+
+
+
