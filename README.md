@@ -1,5 +1,11 @@
 # WANG REDA
 
+
+
+YouTube link to our project demo:
+# https://bit.ly/jh-redavideo
+
+
 Mistakes of violating social distancing are often committed without consciousness. 
 It is very much required to look for a feasible method to deal with the same by employing a bot to monitor the social distancing and spread awareness among the human community. 
 
@@ -27,6 +33,3 @@ monitoring.
 
 ● A table created on the website lists all the suspects and their details reported by the users to the chatbot.
 
-
-YouTube link to our project demo:
-# https://bit.ly/jh-redavideo
