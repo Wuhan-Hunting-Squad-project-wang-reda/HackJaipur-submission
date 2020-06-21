@@ -182,3 +182,68 @@ def report_suspect_api():
         db.commit()
         return "{'status':" + "'" + str(cursor.rowcount) + "'}"
 
+@app.route("/api/data_to_plot_graph/")
+def api_to_display_graph():
+    # data is received in http get method
+    db, cursor = require_db_connection()
+    # make sql query
+    sql_query_to_get_all_dates = "SELECT Date FROM reported_data"
+    sql_query_to_get_all_counts = "SELECT Count FROM reported_data"
+
+
+    cursor.execute(sql_query_to_get_all_dates)
+    date_array = cursor.fetchall()
+
+
+    cursor.execute(sql_query_to_get_all_counts)
+    count_array = cursor.fetchall()
+
+
+    dictionary = {
+        "date":date_array,
+        "count":count_array
+    }
+
+
+
+
+    return jsonify(dictionary)
+
+
+
+# updating the violation count to the database
+@app.route("/api/report_count/", methods=['GET'])
+def reported_data_api():
+    db, cursor = require_db_connection()
+    # data received in http get method
+    date = request.args.get('Date')
+    count = request.args.get('Count')
+    # check is the required data is given to run the SQL commands
+    if date is None:
+        return "{'STATUS':'FAILED TO UPDATE COUNT'}"
+    else:
+        query_to_check_date_and_get_count = "SELECT Count " + "FROM reported_data" + " WHERE Date = " + "'" + date + "'"
+        cursor.execute(query_to_check_date_and_get_count)
+        response = cursor.fetchone()
+        # if the response is None then no date is there in db, else response will contain the count but in str type
+
+        if response is None:
+            # if the response is none means there is no data with the following date therefore you must create a new data so you use insert
+            sql_query = "INSERT INTO reported_data (Date,Count) VALUES (%s,%s)"
+            values = (date, count)
+            cursor.execute(sql_query, values)
+            db.commit()
+            return "{'STATUS':'TODAY DATE INSERTED' }"
+        else:
+            query_to_update = "UPDATE reported_data SET Count= " + "'" + str(int(count) + int(response[0])) + "'" + "WHERE Date = " + "'" + date + "'"
+            # above query means that you are updating the database with the date given with the values.
+            # note that you are updating the values,actually u are adding count and the response by explicitly convertinf to int and after adding converting to string
+            # now once you are done u ll execute below statement
+            cursor.execute(query_to_update)
+            db.commit()
+            return "{'STATUS': 'COUNT UPDATED'}"
+
+
+
+if __name__ == "__main__":
+    app.run("localhost")

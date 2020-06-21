@@ -26,19 +26,28 @@ function number_format(number, decimals, dec_point, thousands_sep) {
   }
   return s.join(dec);
 }
-
+var x,y;
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myArr = JSON.parse(this.responseText);
+    x=myArr["date"];
+    y=myArr["count"];
+  }
+  console.log(x);
+  console.log(y);
 
   var ctx = document.getElementById("myBarChart");
 var myBarChart = new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: ["11th june", "12th june", "13th june", "14th june", "15th june", "16th june"],
+    labels: x,
     datasets: [{
       label: "Number",
       backgroundColor: "#4e73df",
       hoverBackgroundColor: "#2e59d9",
       borderColor: "#4e73df",
-      data: [42, 53, 5, 30, 21, 84],
+      data: y,
     }],
   },
   options: {
@@ -109,5 +118,9 @@ var myBarChart = new Chart(ctx, {
     },
   }
 });
+};
+
+xmlhttp.open("GET", "http://localhost:5000/api/data_to_plot_graph/", true);
+xmlhttp.send();
 
 
