@@ -182,6 +182,23 @@ def report_suspect_api():
         db.commit()
         return "{'status':" + "'" + str(cursor.rowcount) + "'}"
 
+@app.route('/api/report_image/', methods=['POST'])
+def process_and_report_image():
+    db, cursor = require_db_connection()
+    file = request.files['image']
+    file_uri = "reda_image_uploads/" + str(file.filename)
+    if file is not None:
+        file.save("static/"+file_uri)
+        sql_query = 'INSERT INTO gallery_uri_storage (uri,reported_date_time,filename) VALUES (%s,%s,%s)'
+        values = (file_uri, str(datetime.datetime.now()), str(file.filename))
+        # this datetime.date.today() prints the current date of the os clocking in.
+        cursor.execute(sql_query, values)
+        db.commit()
+        return "{'STATUS':" + "'" + "IMAGE UPLOADED" + "'}"
+
+    return "{'STATUS':" + "'" + "UPLOAD FAILED" + "'}"
+
+
 @app.route("/api/data_to_plot_graph/")
 def api_to_display_graph():
     # data is received in http get method
