@@ -163,3 +163,22 @@ def datacompendium():
                             userinfo=session['profile'],
                             userinfo_pretty=json.dumps(session['jwt_payload'], indent=4), len=len(name_array), slno_array=slno_array, name_array=name_array, symptoms_array=symptoms_array, address_array=address_array, age_array=age_array, reported_date_array=reported_date_array))
 
+@app.route('/api/report_suspect/', methods=['GET'])
+def report_suspect_api():
+    db, cursor = require_db_connection()
+    # data is received in http get method
+    suspected_name = request.args.get('suspected_name')
+    symptoms = request.args.get('symptoms')
+    address = request.args.get('address')
+    age = request.args.get('age')
+    reported_date = request.args.get('reported_date')
+    # now check if all the data are available and only then execute mysql commands.
+    if suspected_name is None or symptoms is None:
+        return "{'status':'0'}"
+    else:
+        sql_query = "INSERT INTO suspect_reports (name,symptoms,address,age,reported_date) VALUES (%s,%s,%s,%s,%s)"
+        values = (suspected_name, symptoms, address, age, reported_date)
+        cursor.execute(sql_query, values)
+        db.commit()
+        return "{'status':" + "'" + str(cursor.rowcount) + "'}"
+
