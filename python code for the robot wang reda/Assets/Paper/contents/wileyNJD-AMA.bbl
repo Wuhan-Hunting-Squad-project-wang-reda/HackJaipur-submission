@@ -1,0 +1,137 @@
+\begin{thebibliography}{10}
+\providecommand \doibase [0]{http://dx.doi.org/}%
+
+\bibitem{b1}
+WHO Coronavirus disease (COVID-19) Dashboard.  2021.
+\newblock \href{https://covid19.who.int}{https://covid19.who.int}.
+
+\bibitem{b2}
+Our world in data “Mortality risk of COVID-19.
+\newblock \url{https://ourworldindata.org/mortality-risk-covid}.
+
+\bibitem{b3}
+Ferguson N, Laydon D, Nedjati-Gilani G, et al. Report 9: Impact of
+  non-pharmaceutical interventions (NPIs) to reduce COVID-19 mortality and
+  healthcare demand.  2020.
+\newblock \href {\doibase 10.25561/77482} {doi: 10.25561/77482}
+
+\bibitem{b4}
+Thunström L, Newbold SC, Finnoff D, Ashworth M, Shogren JF. The Benefits and
+  Costs of Using Social Distancing to Flatten the Curve for COVID-19. {\it
+  Journal of Benefit-Cost Analysis} 2020\string; 11(2)\string: 179–195.
+\newblock \href {\doibase 10.1017/bca.2020.12} {doi: 10.1017/bca.2020.12}
+
+\bibitem{b5}
+Venkatesh A, Edirappuli S. Social distancing in covid-19: what are the mental
+  health implications?. In: . 369. BMJ. BMJ Publishing Group Ltd; 2020
+
+\bibitem{b6}
+Klaiber P, Wen JH, DeLongis A, Sin NL. {The Ups and Downs of Daily Life During
+  COVID-19: Age Differences in Affect, Stress, and Positive Events}. {\it The
+  Journals of Gerontology: Series B} 2020\string; 76(2)\string: e30-e37.
+\newblock \href {\doibase 10.1093/geronb/gbaa096} {doi: 10.1093/geronb/gbaa096}
+
+\bibitem{b7}
+Villaronga EF, Kieseberg P, Li T. Humans forget, machines remember: Artificial
+  intelligence and the Right to Be Forgotten. {\it Computer Law \& Security
+  Review} 2018\string; 34(2)\string: 304-313.
+\newblock \href {\doibase https://doi.org/10.1016/j.clsr.2017.08.007} {doi:
+  https://doi.org/10.1016/j.clsr.2017.08.007}
+
+\bibitem{b27}
+CDC - How to Protect Yourself \& Others.
+\newblock
+  \href{https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html}{https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html}.
+
+\bibitem{b8}
+Primkulov S, Urolov J, Singh M. Voice Assistant for Covid-19. In:  Singh M,
+  Kang DK, Lee JH, Tiwary US, Singh D, Chung WY. \kern-2pt, eds. {\it
+  Intelligent Human Computer Interaction}Springer International Publishing;
+  2021; Cham\string: 299--306.
+
+\bibitem{b9}
+Mishra~T. MAea. Pre-symptomatic detection of COVID-19 from smartwatch data..
+  {\it Int {J} {N}umer {M}eth {F}l} 2020\string; 77(11)\string: 1208–1220.
+\newblock \href{ https://doi.org/10.1038/s41551-020-00640-6}{
+  https://doi.org/10.1038/s41551-020-00640-6}.
+
+\bibitem{b10}
+Do The Most Expensive Gadgets Justify The Price?. In:
+  \href{https://guide.servify.in/do-expensive-gadgets-justify-price}{https://guide.servify.in/do-expensive-gadgets-justify-price}.
+
+\bibitem{b26}
+K.~RajKumar CY, Murugan MS. PORTABLE SURVEILLANCE ROBOT USING IOT. {\it
+  Sensors} 2020\string; 20\string: 3355.
+\newblock \href {\doibase 10.3390/s20123355} {doi: 10.3390/s20123355}
+
+\bibitem{b11}
+Liska R, Shashkov M, Vachal P, Wendroff B. COVID-19 Coronavirus Pandemic
+  Stats,.
+\newblock
+  \href{https://www.worldometers.info/coronavirus/}{worldometers.info/coronavirus}.
+
+\bibitem{b12}
+Cole~Tharaldson DAC. Raspberry Pi AI Assistant, Department of Computer Science,
+  Minnesota State University Moorhead.
+\newblock
+  \href{https://red.mnstate.edu/cgi/viewcontent.cgi?article=1006\&context=sac}{https://red.mnstate.edu/cgi/viewcontent.cgi?article=1006\&context=sac}.
+
+\bibitem{b13}
+Redmon J, Farhadi A. YOLOv3: An Incremental Improvement.;  2018.
+
+\bibitem{b14}
+Sabharwal N, Agrawal A. Introduction to Google Dialogflow.  2020\string:
+  13--54.
+\newblock \href {\doibase 10.1007/978-1-4842-5741-8\_2} {doi:
+  10.1007/978-1-4842-5741-8\_2}
+
+\bibitem{b15}
+M. G. Flask web development: developing web applications with python..  2018
+  Mar 5.
+
+\bibitem{b16}
+Auth0 . About Auth0.
+\newblock \href{https://auth0.com/about}{https://auth0.com/about}.
+
+\bibitem{b17}
+Danielsson PE. Euclidean distance mapping. In: . 14.  1980 (pp. 227-248)
+
+\bibitem{b18}
+Disease~Control fC, Prevention . COVID-19 Frequently Asked Questions.
+\newblock
+  \href{https://www.cdc.gov/coronavirus/2019-ncov/faq.html}{https://www.cdc.gov/coronavirus/2019-ncov/faq.html}.
+
+\bibitem{b19}
+Durette PN. Google Text-to-Speech API Documentation.
+\newblock
+  \href{https://gtts.readthedocs.io/en/latest/}{gtts.readthedocs.io/en/latest}.
+
+\bibitem{b20}
+Kröger R. Forecast for the second Covid-19 wave based on the improved SIR
+  model with a constant ratio of recovery to infection rate.. tech. rep., ; :
+  2021
+
+\bibitem{b21}
+V. N. COVID Second Wave in India–Revisiting the TIP Approach.. In: The Indian
+  Practitioner; 2021 Apr 24.
+\newblock 74(4):7-9.
+
+\bibitem{b22}
+Bramanti B, Dean K, Walløe L, Stenseth NC. The Third Plague Pandemic in
+  Europe. {\it Proceedings of the Royal Society B: Biological Sciences}
+  2019\string; 286.
+\newblock \href {\doibase 10.1098/rspb.2018.2429} {doi: 10.1098/rspb.2018.2429}
+
+\bibitem{b23}
+Le~NK BJea. Impact of government-imposed social distancing measures on COVID-19
+  morbidity and mortality around the world.  10/2020.
+
+\bibitem{24}
+Yuan W, Li Z. Development of a human-friendly robot for socially aware
+  human-robot interaction. tech. rep., ; :   2017
+
+\bibitem{b25}
+Google . {\it Google Assistant, your own personal Google}.
+\newblock \href{https://assistant.google.com/}{assistant.google.com}.
+
+\end{thebibliography}

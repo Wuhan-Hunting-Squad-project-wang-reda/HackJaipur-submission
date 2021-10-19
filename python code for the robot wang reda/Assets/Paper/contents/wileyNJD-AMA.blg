@@ -1,0 +1,102 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: wileyNJD-AMA.aux
+Reallocating 'name_of_file' (item size: 1) to 13 items.
+The style file: WileyNJD-AMA.bst
+Reallocating 'name_of_file' (item size: 1) to 13 items.
+Database file #1: wileyNJD-AMA.bib
+Warning--I didn't find a database entry for "Liska2010"
+Warning--I didn't find a database entry for "Taylor1937"
+Warning--I didn't find a database entry for "Knupp1999"
+Warning--I didn't find a database entry for "Kamm2000"
+Warning--I didn't find a database entry for "Kucharik2003"
+Warning--I didn't find a database entry for "Blanchard2015"
+Warning--I didn't find a database entry for "Burton2013"
+Warning--I didn't find a database entry for "Berndt2011"
+Warning--I didn't find a database entry for "Kucharik2012"
+Warning--I didn't find a database entry for "Breil2015"
+Warning--I didn't find a database entry for "Barth1997"
+Warning--I didn't find a database entry for "Lauritzen2011"
+Warning--I didn't find a database entry for "Klima2017"
+Warning--I didn't find a database entry for "Dukowicz2000"
+Warning--I didn't find a database entry for "Kucharik2011"
+Warning--I didn't find a database entry for "Kucharik2014"
+Warning--I didn't find a database entry for "Loubere2005"
+Warning--I didn't find a database entry for "Caramana1998"
+Warning--I didn't find a database entry for "Hoch2009"
+Warning--I didn't find a database entry for "Shashkov1996"
+Warning--I didn't find a database entry for "Hirt1974"
+Warning--I didn't find a database entry for "Benson1992"
+Warning--I didn't find a database entry for "Margolin2003"
+Warning--I didn't find a database entry for "Kenamond2013"
+Warning--empty author in b1
+Warning--empty journal in b1
+Warning--empty author in b2
+Warning--empty journal in b2
+Warning--empty year in b2
+Warning--empty journal in b3
+Warning--empty author in b27
+Warning--empty journal in b27
+Warning--empty year in b27
+Warning--empty author in b10
+Warning--empty publisher in b10
+Warning--empty year in b10
+Warning--empty journal in b11
+Warning--empty year in b11
+Warning--empty journal in b12
+Warning--empty year in b12
+Warning--empty journal in b14
+Warning--empty journal in b15
+Warning--empty journal in b16
+Warning--empty year in b16
+Warning--can't use both volume and number fields in b17
+Warning--empty publisher in b17
+Warning--empty journal in b18
+Warning--empty year in b18
+Warning--empty journal in b19
+Warning--empty year in b19
+Warning--empty journal in b23
+Warning--empty publisher in b25
+Warning--empty year in b25
+You've used 27 entries,
+            2067 wiz_defined-function locations,
+            724 strings with 9761 characters,
+and the built_in function-call counts, 4727 in all, are:
+= -- 402
+> -- 184
+< -- 0
++ -- 81
+- -- 54
+* -- 454
+:= -- 777
+add.period$ -- 42
+call.type$ -- 27
+change.case$ -- 2
+chr.to.int$ -- 0
+cite$ -- 56
+duplicate$ -- 269
+empty$ -- 524
+format.name$ -- 54
+if$ -- 1082
+int.to.chr$ -- 0
+int.to.str$ -- 27
+missing$ -- 25
+newline$ -- 103
+num.names$ -- 25
+pop$ -- 135
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 32
+stack$ -- 0
+substring$ -- 0
+swap$ -- 30
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 29
+while$ -- 24
+width$ -- 29
+write$ -- 259
+(There were 53 warnings)
